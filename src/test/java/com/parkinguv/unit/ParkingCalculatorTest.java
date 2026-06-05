@@ -18,4 +18,16 @@ class ParkingCalculatorTest {
                 calculator.calculateFee(30, false)
         );
     }
+
+    @Test
+    void shouldChargeFirstHourAfterThirtyMinutes() {
+
+        ParkingCalculator calculator =
+                new ParkingCalculator();
+
+        assertEquals(
+                500,
+                calculator.calculateFee(31, false)
+        );
+    }
 }
