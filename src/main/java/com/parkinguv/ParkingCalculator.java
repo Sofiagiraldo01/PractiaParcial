@@ -6,6 +6,10 @@ public class ParkingCalculator {
             int minutes,
             boolean vip) {
 
-        return 0;
+        if (minutes <= 30) {
+            return 0;
+        }
+
+        return 500;
     }
 }
