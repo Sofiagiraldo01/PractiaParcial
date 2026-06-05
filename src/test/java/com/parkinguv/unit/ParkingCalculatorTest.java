@@ -30,4 +30,16 @@ class ParkingCalculatorTest {
                 calculator.calculateFee(31, false)
         );
     }
+
+    @Test
+    void shouldChargeTwoHours() {
+
+        ParkingCalculator calculator =
+                new ParkingCalculator();
+
+        assertEquals(
+                1000,
+                calculator.calculateFee(90, false)
+        );
+    }
 }
