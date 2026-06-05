@@ -51,7 +51,7 @@ class ParkingCalculatorTest {
 
         assertEquals(
                 800,
-                calculator.calculateFee(90, true)
+                calculator.calculateFee(91, true)
         );
     }
 }

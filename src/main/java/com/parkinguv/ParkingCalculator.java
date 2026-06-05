@@ -18,6 +18,13 @@ public class ParkingCalculator {
                         chargeableMinutes / 60.0
                 );
 
-        return hours * 500;
+        double total =
+                hours * 500;
+
+        if (vip) {
+            total *= 0.8;
+        }
+
+        return total;
     }
 }
