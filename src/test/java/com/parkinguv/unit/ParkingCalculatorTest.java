@@ -54,4 +54,19 @@ class ParkingCalculatorTest {
                 calculator.calculateFee(91, true)
         );
     }
+
+    @Test
+    void shouldApplyDailyCap() {
+
+        ParkingCalculator calculator =
+                new ParkingCalculator();
+
+        assertEquals(
+                12000,
+                calculator.calculateFee(
+                        2000,
+                        false
+                )
+        );
+    }
 }
