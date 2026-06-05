@@ -42,4 +42,16 @@ class ParkingCalculatorTest {
                 calculator.calculateFee(91, false)
         );
     }
+
+    @Test
+    void shouldApplyVipDiscount() {
+
+        ParkingCalculator calculator =
+                new ParkingCalculator();
+
+        assertEquals(
+                800,
+                calculator.calculateFee(90, true)
+        );
+    }
 }
