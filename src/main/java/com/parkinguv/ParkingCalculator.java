@@ -10,6 +10,14 @@ public class ParkingCalculator {
             return 0;
         }
 
-        return 500;
+        int chargeableMinutes =
+                minutes - 30;
+
+        int hours =
+                (int) Math.ceil(
+                        chargeableMinutes / 60.0
+                );
+
+        return hours * 500;
     }
 }
