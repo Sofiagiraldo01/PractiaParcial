@@ -1,4 +1,21 @@
 package com.parkinguv.unit;
 
-public class ParkingCalculatorTest {
+import com.parkinguv.ParkingCalculator;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+class ParkingCalculatorTest {
+
+    @Test
+    void shouldReturnZeroForThirtyMinutes() {
+
+        ParkingCalculator calculator =
+                new ParkingCalculator();
+
+        assertEquals(
+                0,
+                calculator.calculateFee(30, false)
+        );
+    }
 }
